@@ -67,7 +67,7 @@ body{
   background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
   width:100%;
 }
-.card img{display:block;width:auto;max-width:100%;height:auto;object-fit:contain;vertical-align:middle}
+.card img{display:block;width:100%;max-width:100%;height:auto;object-fit:cover;vertical-align:middle}
 .card figcaption{
   position:absolute;
   left:0;right:0;bottom:0;
@@ -78,7 +78,7 @@ body{
 }
 
 @media (max-width:520px){
-  .card img{max-height:160px;height:auto}
+  .card img{max-height:160px;width:100%;height:auto;object-fit:cover}
 }
 
 /* small, subtle title over gallery */
