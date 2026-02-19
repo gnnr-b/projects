@@ -96,12 +96,33 @@ body{
   top: 50%;
   transform: translateY(-50%);
   text-decoration: none;
-  color: #aaa;
+  color: var(--fg);
   font-size: 18px;
   white-space: nowrap;
   text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9);
+  transition: color .22s ease;
 }
-.back:hover {
+.back::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  bottom: -0.35rem;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transition: transform .22s ease;
+  transform-origin: center;
+}
+.back:hover,
+.back:focus {
+  color: #ffd166;
+}
+.back:hover::after,
+.back:focus::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.back:active {
   color: var(--fg);
 }
 @media (max-width: 520px) {
