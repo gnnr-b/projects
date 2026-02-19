@@ -37,7 +37,13 @@ body{
   padding:48px 20px;
 }
 
-.site-header{margin-bottom:24px;text-align:center}
+.site-header{
+  position:relative;
+  width:100%;
+  max-width:900px;
+  margin-bottom:24px;
+  text-align:center;
+}
 .title{
   font-family: 'Badeen Display', serif;
   font-size: clamp(2.5rem, 8vw, 8rem);
@@ -83,4 +89,27 @@ body{
 
 /* small, subtle title over gallery */
 .site-header .title{background:transparent}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #aaa;
+  font-size: 18px;
+  white-space: nowrap;
+  text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9);
+}
+.back:hover {
+  color: var(--fg);
+}
+@media (max-width: 520px) {
+  .back {
+    position: static;
+    display: block;
+    transform: none;
+    margin-bottom: 0.75em;
+  }
+}
 
